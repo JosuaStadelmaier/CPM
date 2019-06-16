@@ -40,7 +40,7 @@ configurations = {
         'context_training_steps': 30000,
         'context_optimizer': ['Adam'],
         'context_learning_rate': [0.001],
-        'context_batch_size': 5,
+        'context_batch_size': 30,
         'context_skip_steps': 500,  # print training loss
         'context_steps_checkpoint': {0, 5000, 10000, 15000, 20000, 25000, 30000},  # loss and ranking validation
         'path_relevance_model': ['DotProduct'],  # see cpm.py for other options
