@@ -25,7 +25,7 @@ We manually evaluated the CPM on identifying paths that provide
 the most convincing evidence for or against the correctness of a new triple.
 The annotation scheme and the experimental setup is described in the linked paper.
 
-[Annotated predictions with explanations for test triples](explanations/annotated_test_explanations.html)
+[Annotated predictions with explanations for test triples](http://htmlpreview.github.io/?https://github.com/JosuaStadelmaier/CPM/blob/master/explanations/annotated_test_explanations.html)
 
 
 ## Usage
