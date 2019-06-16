@@ -1,0 +1,16 @@
+This directory contains the FB15k dataset, which was extracted
+from Freebase by Bordes et al. (2013).
+The paper from Bordes et al. and FB15k can be downloaded here:
+https://everest.hds.utc.fr/doku.php?id=en:transe
+
+Each line of the files represents a Freebase fact of the format
+entity 1 	relation	entity 2
+Entities are represented by their MIDs (Machine Identifiers),
+which can be resolved to real names using the real name index in ../index/.
+
+The full Freebase dump can be downloaded from Google:
+https://developers.google.com/freebase/
+
+LICENSE:
+FB15k data follows Freebase license, that is Creative Commons Attribution (aka CC-BY)
+(http://creativecommons.org/licenses/by/2.5/).
