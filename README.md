@@ -25,7 +25,7 @@ We manually evaluated the CPM on identifying paths that provide
 the most convincing evidence for or against the correctness of a new triple.
 The annotation scheme and the experimental setup is described in the linked paper.
 
-[Annotated predictions with explanations for test triples](explanations/annotated_test_explanations.rtf)
+[Annotated predictions with explanations for test triples](explanations/annotated_test_explanations.html)
 
 
 ## Usage
@@ -39,7 +39,7 @@ We use Tensorflow 1.12.0 and Python 3.6.5 in our implementation.
 2. Create index of combinations of relations and context paths (already provided for FB15K):
     ```
     $ python data_processing.py --cpm_index
-    ``` 
+    ```
 3. Generate single-edge training and evaluation data for 'plain' KBC models:
     ```
     $ python data_processing.py --plain
@@ -64,7 +64,7 @@ We use Tensorflow 1.12.0 and Python 3.6.5 in our implementation.
     ```
     $ python data_processing.py --explanations
     ```
-    
+
 ### Training
 1. Training plain KBC models on single edges:
     ```
@@ -78,7 +78,7 @@ We use Tensorflow 1.12.0 and Python 3.6.5 in our implementation.
     ```
     $ python main.py -d model_description --cpm --paths
     ```
-    
+
 ### Testing
 - Testing edge-trained KBC models on predicting edges or paths of length `L`:
     ```
@@ -92,7 +92,7 @@ We use Tensorflow 1.12.0 and Python 3.6.5 in our implementation.
     ```
     $ python main.py -d model_description --cpm --paths --evaluate
     ```
-    
+
 ### Fact prediction and explanation
 - Performing fact prediction with explanations using the CPM:
     ```
@@ -116,6 +116,6 @@ We use Tensorflow 1.12.0 and Python 3.6.5 in our implementation.
 - `data/FB15K/original/`: The original FB15K data set from Bordes et al.
 - `data/FB15K/plain_kbc/`: Training and evaluation files for 'plain' KBC models.
 - `data/FB15K/cpm/`: Training and evaluation files for the CPM.
-- `data/FB15K/index/`: Indices of entity MIDs, entity names, relations and context paths. 
+- `data/FB15K/index/`: Indices of entity MIDs, entity names, relations and context paths.
 - `training_summaries/`: Training summaries for visualization in TensorBoard.
 - `checkpoints/`: Saved models.
