@@ -8,7 +8,7 @@ can be found in the following paper:
 Josua Stadelmaier and Sebastian Padó. 2019. [Modeling Paths for Explainable Knowledge Base Completion](#) (link will follow). In Proceedings of the 2019 ACL Workshop BlackboxNLP: Analyzing and Interpreting Neural Networks for NLP.
 
 ## Introduction
-The CPM generates explanations for new facts in knowledge base completion
+The CPM generates explanations for new facts in knowledge base completion (KBC)
 by providing sets of context paths as supporting evidence for these triples.
 For example, a new triple (Theresa May, nationality, Britain) may be explained
 by the path (Theresa May, born in, Eastbourne, contained in, Britain).
@@ -17,7 +17,7 @@ existing knowledge base completion models.
 
 In our experiments, we instantiate the CPM with
 [TransE](https://www.utc.fr/~bordesan/dokuwiki/_media/en/transe_nips13.pdf)
-(Bordes et al, 2013) and use the data set [FB15K](https://everest.hds.utc.fr/doku.php?id=en:transe).
+(Bordes et al., 2013) and use the data set [FB15K](https://everest.hds.utc.fr/doku.php?id=en:transe).
 
 
 ## Annotated predictions
