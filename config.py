@@ -77,7 +77,7 @@ def config_generator(name):
 def get_file_paths(config):
     data_set_name = config['data_set_name']
     base_dir = 'data/' + data_set_name
-    baseline_dir = 'data/' + data_set_name + '/baseline'
+    baseline_dir = 'data/' + data_set_name + '/plain_kbc'
     cpm_dir = 'data/' + data_set_name + '/cpm'
     typing = '' if config['type_matching'] else '_untyped'
     return {

@@ -10,13 +10,13 @@ import gzip
 
 '''
 This class handles all data processing for the Context Path Model
-and the baseline KBC models.
+and the plain KBC models.
 Structure:
 - Indexing
 - Knowledge graph generation
-- Baseline training data generation
-- Baseline evaluation data generation
-- Baseline path traversing
+- Plain KBC training data generation
+- Plain KBC evaluation data generation
+- Plain KBC path traversing
 - Context path indexing
 - Context path generation
 - Explanation data generation
@@ -301,7 +301,7 @@ class DataProcessing(object):
             knowledge_graph[e2] = {'out': {}, 'in': {r: {e1}}}
 
     '''
-    BASELINE TRAINING DATA GENERATION
+    PLAIN KBC TRAINING DATA GENERATION
     '''
 
     # loss data set creation
@@ -405,7 +405,7 @@ class DataProcessing(object):
         return data_set_expanded
 
     '''
-    BASELINE EVALUATION DATA GENERATION
+    PLAIN KBC EVALUATION DATA GENERATION
     '''
 
     def triple_evaluation_set(self, generator, evaluation_filter=None):
@@ -497,7 +497,7 @@ class DataProcessing(object):
             yield e1, e2, e1_domain, e2_domain, [r]
 
     '''
-    BASELINE PATH TRAVERSING
+    PLAIN KBC PATH TRAVERSING
     '''
 
     def path_generator(self, path_length):
@@ -1522,11 +1522,11 @@ class DataProcessing(object):
         print(i)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":gi
     parser = argparse.ArgumentParser()
     parser.add_argument('--index', help='Index train, valid and test data', action='store_true')
-    parser.add_argument('--plain', help='Single edge data set generation for baseline KBC model', action='store_true')
-    parser.add_argument('--paths', help='Path data set generation for baseline KBC model', action='store_true')
+    parser.add_argument('--plain', help='Single edge data set generation for plain KBC model', action='store_true')
+    parser.add_argument('--paths', help='Path data set generation for plain KBC model', action='store_true')
     parser.add_argument('--cpm', help='Data set generation for the CPM', action='store_true')
     parser.add_argument('--explanations', help='Explanation data set generation for the CPM', action='store_true')
     parser.add_argument('--cpm_index', help='Index (and filter) context path-relation combinations', action='store_true')
@@ -1540,7 +1540,3 @@ if __name__ == "__main__":
     args = parser.parse_args()
     config = next(config_generator(args.config))
     data = DataProcessing(config)
-
-
-
-
