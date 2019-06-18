@@ -1522,7 +1522,7 @@ class DataProcessing(object):
         print(i)
 
 
-if __name__ == "__main__":gi
+if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--index', help='Index train, valid and test data', action='store_true')
     parser.add_argument('--plain', help='Single edge data set generation for plain KBC model', action='store_true')

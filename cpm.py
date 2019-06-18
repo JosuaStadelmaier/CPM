@@ -143,10 +143,10 @@ class CPM(TransE):
 
     def evaluation_data(self):
         with tf.name_scope('context_evaluation_data'):
-            # data set for computing the context-aware training loss on single edges
+            # data set for computing the training loss on single edges
             self.training_loss_datapoint = self.loss_evaluation_data(self.config['context_train_loss_file'])
 
-            # data set for computing the context-aware validation loss on single edges
+            # data set for computing the validation loss on single edges
             self.validation_loss_datapoint = self.loss_evaluation_data(self.config['context_valid_loss_file'])
 
             # data sets for computing context ranking metrics on single edges
@@ -434,15 +434,15 @@ class CPM(TransE):
 
             # Restore model
             latest_checkpoint = tf.train.latest_checkpoint(checkpoint_dir + context_description + joint_training)
-            if latest_checkpoint is not None:  # Restore context aware model
-                print("Restore context model from {}".format(latest_checkpoint))
+            if latest_checkpoint is not None:
+                print("Restore CPM from {}".format(latest_checkpoint))
                 self.saver.restore(sess, latest_checkpoint)
             else:
                 # Optimizer parameter initialization
                 sess.run(tf.variables_initializer(self.optimizer.variables()))
 
                 latest_checkpoint = tf.train.latest_checkpoint(checkpoint_dir + description)
-                print("Restore baseline model from {}".format(latest_checkpoint))
+                print("Restore plain KBC model from {}".format(latest_checkpoint))
                 self.baseline_model.restore(sess, latest_checkpoint)
 
                 sess.run(self.path_relation_connection.initializer)
@@ -1009,7 +1009,7 @@ class CPM(TransE):
             latest_checkpoint = tf.train.latest_checkpoint(checkpoint_dir + context_description + joint_training)
         else:
             latest_checkpoint = checkpoint_dir + context_description + joint_training + '/model-at-step-' + self.args.checkpoint
-        print("Restore context model from {}".format(latest_checkpoint))
+        print("Restore CPM {}".format(latest_checkpoint))
         self.saver.restore(sess, latest_checkpoint)
 
     def describe(self):

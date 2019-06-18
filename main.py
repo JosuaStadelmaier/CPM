@@ -44,19 +44,18 @@ parser.add_argument("--plain", help="Train the plain KBC model.", action="store_
 parser.add_argument("--paths", help="Path training", action="store_true")
 parser.add_argument("--cpm", help="Train the context aware model", action="store_true")
 parser.add_argument("--evaluate", help="Evaluate model", action="store_true")
-parser.add_argument("--explain", help="Predict and explain using context-aware model", action="store_true")
+parser.add_argument("--explain", help="Predict and explain using the CPM", action="store_true")
 parser.add_argument("--config", help="Name of the configuration", default="Params_for_BlackboxNLP")
 parser.add_argument("-b", help="Start index of configurations", type=int, default=0)
 parser.add_argument("-e", help="End index of configurations", type=int, default=None)
 parser.add_argument("-i", help="Index of configuration", type=int, default=None)
 parser.add_argument("--part", help="Partition of the evaluation files", type=int, default=None)
-parser.add_argument("-d", help="Description of configuration", default="")
-parser.add_argument("-cd", help="Description of configuration for context-aware model", default="")
+parser.add_argument("-d", help="Description of the configuration for the plain KBC model", default="")
+parser.add_argument("-cd", help="Description of the configuration for the CPM", default="")
 parser.add_argument("--joint_training", help="Joint training of plain KBC model and CPM", action="store_true")
 parser.add_argument("--restore", help="Restore model from checkpoint, config has to match", action="store_true")
 parser.add_argument("--path_length", help="Path length for evaluation", type=int, default=None)
 parser.add_argument("--gpu", help="Index of used gpu", default=None)
-parser.add_argument("--corrupted_entity", help="Which entity to corrupt during evaluation", default="")
 parser.add_argument("--analyse", help="Analyse relevance scores of paths-relation combinations.", action="store_true")
 parser.add_argument("--list_configs", help="List all configuration combinations", action="store_true")
 parser.add_argument("--verbose", help="Print explanations.", action="store_true")
@@ -88,5 +87,3 @@ else:
         if args.list_configs:
             continue
         run(configurations[i])
-
-
