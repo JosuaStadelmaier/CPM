@@ -5,7 +5,7 @@ and its annotated predictions on FB15K.
 Details on this model and experiments conducted with it
 can be found in the following paper:
 
-Josua Stadelmaier and Sebastian Padó. 2019. [Modeling Paths for Explainable Knowledge Base Completion](#) (link will follow). In Proceedings of the 2019 ACL Workshop BlackboxNLP: Analyzing and Interpreting Neural Networks for NLP.
+Josua Stadelmaier and Sebastian Padó. 2019. [Modeling Paths for Explainable Knowledge Base Completion](https://nlpado.de/~sebastian/pub/papers/blackboxnlp19_stadelmaier.pdf). In Proceedings of the 2019 ACL Workshop BlackboxNLP: Analyzing and Interpreting Neural Networks for NLP.
 
 ## Introduction
 The CPM generates explanations for new facts in knowledge base completion (KBC)
