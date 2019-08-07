@@ -1,11 +1,11 @@
 # Context Path Model (CPM)
 
 This repository contains the code of the Context Path Model
-and its annotated predictions on FB15K.
+and its annotated predictions on FB15k.
 Details on this model and experiments conducted with it
 can be found in the following paper:
 
-Josua Stadelmaier and Sebastian Padó. 2019. [Modeling Paths for Explainable Knowledge Base Completion](https://nlpado.de/~sebastian/pub/papers/blackboxnlp19_stadelmaier.pdf). In Proceedings of the 2019 ACL Workshop BlackboxNLP: Analyzing and Interpreting Neural Networks for NLP.
+Josua Stadelmaier and Sebastian Padó. 2019. [Modeling Paths for Explainable Knowledge Base Completion](https://www.aclweb.org/anthology/W19-4816). In Proceedings of the 2019 ACL Workshop BlackboxNLP: Analyzing and Interpreting Neural Networks for NLP.
 
 ## Introduction
 The CPM generates explanations for new facts in knowledge base completion (KBC)
@@ -17,7 +17,7 @@ existing knowledge base completion models.
 
 In our experiments, we instantiate the CPM with
 [TransE](https://www.utc.fr/~bordesan/dokuwiki/_media/en/transe_nips13.pdf)
-(Bordes et al., 2013) and use the data set [FB15K](https://everest.hds.utc.fr/doku.php?id=en:transe).
+(Bordes et al., 2013) and use the data set [FB15k](https://everest.hds.utc.fr/doku.php?id=en:transe).
 
 
 ## Annotated predictions
@@ -32,11 +32,11 @@ The annotation scheme and the experimental setup is described in the linked pape
 We use Tensorflow 1.12.0 and Python 3.6.5 in our implementation.
 
 ### Data processing
-1. Index original data set for efficiency (can be skipped for FB15K, index is already provided)
+1. Index original data set for efficiency (can be skipped for FB15k, index is already provided)
     ```
     $ python data_processing.py --index
     ```
-2. Create index of combinations of relations and context paths (already provided for FB15K):
+2. Create index of combinations of relations and context paths (already provided for FB15k):
     ```
     $ python data_processing.py --cpm_index
     ```
@@ -113,7 +113,7 @@ We use Tensorflow 1.12.0 and Python 3.6.5 in our implementation.
 
 
 ### Directories:
-- `data/FB15K/original/`: The original FB15K data set from Bordes et al.
+- `data/FB15K/original/`: The original FB15k data set from Bordes et al.
 - `data/FB15K/plain_kbc/`: Training and evaluation files for 'plain' KBC models.
 - `data/FB15K/cpm/`: Training and evaluation files for the CPM.
 - `data/FB15K/index/`: Indices of entity MIDs, entity names, relations and context paths.
